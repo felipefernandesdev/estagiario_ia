@@ -164,6 +164,33 @@ def responder(pergunta):
 
 ---
 
+## Open WebUI — Tela Visual (opcional)
+
+Interface tipo ChatGPT no navegador que conecta no Ollama local.
+
+### Instalação (VPS)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/felipefernandesdev/estagiario_ia/main/scripts/install-open-webui.sh | bash
+```
+
+Acessar em: `http://SEU_IP:8080`
+
+### Docker local
+
+```bash
+docker run -d -p 3000:8080 \
+  --network=host \
+  -v open-webui:/app/backend/data \
+  --name open-webui \
+  --restart unless-stopped \
+  ghcr.io/open-webui/open-webui:main
+```
+
+> Pesa ~1 GB de RAM. Em VPS apertado, pare quando não usar: `docker stop open-webui`
+
+---
+
 ## Desempenho (testado em VPS 4 vCPU, 8 GB RAM, CPU-only)
 
 | Métrica | Valor |
