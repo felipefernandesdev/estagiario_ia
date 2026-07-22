@@ -1,0 +1,2 @@
+hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF
+nomic-embed-text

@@ -1,0 +1,24 @@
+services:
+  ollama:
+    build: .
+    container_name: estagiario-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+      - ./Modelfile:/Modelfile
+      - ./models-to-pull.txt:/models-to-pull.txt
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+      - OLLAMA_ORIGINS=*
+      - PULL_MODELS=${PULL_MODELS:-}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  ollama-models:
