@@ -164,6 +164,46 @@ def responder(pergunta):
 
 ---
 
+## n8n — Orquestrador Low-Code (opcional)
+
+Conecta WhatsApp, CRM, email e a IA do Ollama sem código.
+
+### Instalação (VPS)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/felipefernandesdev/estagiario_ia/main/scripts/install-n8n.sh | bash
+```
+
+Acessar: `http://SEU_IP:5678`
+
+### Fluxo típico
+
+```
+WhatsApp → n8n (webhook) → Ollama API (extrator-leads) → JSON limpo → CRM
+```
+
+---
+
+## n8n — Orquestrador Low-Code (opcional)
+
+Conecta WhatsApp, CRM, email e a IA do Ollama sem código.
+
+### Instalação (VPS)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/felipefernandesdev/estagiario_ia/main/scripts/install-n8n.sh | bash
+```
+
+Acessar: `http://SEU_IP:5678`
+
+### Fluxo típico
+
+```
+WhatsApp → n8n (webhook) → Ollama API (extrator-leads) → JSON limpo → CRM
+```
+
+---
+
 ## Open WebUI — Tela Visual (opcional)
 
 Interface tipo ChatGPT no navegador que conecta no Ollama local.
